@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- jQuery Modal -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	<title>Friendster 2 Electric Boogaloo</title>
+</head>
+<body>
+	<div class="jumbotron">
+		<h1>Friendster Lazer Survey</h1>
+		<p>With the below survey we will find the perfect friend for you</p>
+		<p>Just answer 5 for very agree and 1 for very disagree</p>
+	</div>
+	<div id="friend-modal" class="modal">
+		<h1>We have the perfect friend for you</h1>
+		<h2 id="modal-name"></h2>
+		<img id="modal-picture" src="" alt="looks like your friend didn't give us a good picture"><br>
+		<a href="#" rel="modal:close">I understand my new friendship</a>
+	</div>
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input type="text" class="form-control" id="name">
+	</div>
+	<div class="form-group">
+		<label for="name">Photo of self</label>
+		<input type="text" class="form-control" id="photo">
+	</div>
+	<form id="question1" class="container">
+		<label>It is more important for students to study history and literature than it is for them to study science and mathematics.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question1" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question1" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question1" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question1" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question1" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question2" class="container">
+		<label>It is sometimes said that borrowing money from a friend can harm or damage the friendship.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question2" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question2" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question2" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question2" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question2" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question3" class="container">
+		<label>Playing games teaches us about life.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question3" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question3" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question3" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question3" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question3" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question4" class="container">
+		<label for="name">It is better to be a member of a group than to be the leader of a group</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question4" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question4" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question4" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question4" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question4" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question5" class="container">
+		<label for="name">Dancing plays an important role in a culture.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question5" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question5" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question5" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question5" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question5" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question6" class="container">
+		<label for="name">Telephones and email have made communication between people less personal. </label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question6" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question6" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question6" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question6" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question6" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question7" class="container">
+		<label for="name">Modern technology is creating a single world culture.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question7" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question7" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question7" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question7" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question7" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question8" class="container">
+		<label for="name">The best way to travel is in a group led by a tour guide.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question8" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question8" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question8" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question8" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question8" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question9" class="container">
+		<label for="name">Games are as important for adults as they are for children.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question9" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question9" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question9" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question9" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question9" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<form id="question10" class="container">
+		<label for="name">One should never judge a person by external appearances.</label>
+		<div class="row">
+			<div class="col-sm">
+				<input type="radio" name="question10" value="1" >1
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question10" value="2" >2
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question10" value="3" >3
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question10" value="4" >4
+			</div>
+			<div class="col-sm">
+				<input type="radio" name="question10" value="5" >5
+			</div>
+		</div>	
+	</form>
+	<input class="btn btn-primary" type="submit" value="Submit" id="submitButton">
+</body>
+<script type="text/javascript">
+	$('#submitButton').on('click', function(event){
+		var answerArray=[];
+		event.preventDefault();
+		if(!($("#name").val())){
+			alert("You forgot your name silly");
+			return;
+		}
+		var name=$("#name").val()
+		if(!($("#photo").val())){
+			alert("We need a picture to show your friends silly");
+			return;
+		}
+		var pic = $("#photo").val();
+		for (var i = 1; i <= 10; i++) {
+			if($("input:radio[name='question"+i+"']:checked").val()){
+				answerArray.push($("input:radio[name='question"+i+"']:checked").val());
+			}
+			else
+			{
+				alert("We can't connect you if you don't answer all the questions silly");
+				return;
+			}
+		}
+		$.get("/api/all", function(data){
+			var compatibilityIndex=41;
+			var friendo;
+			data.forEach(function(entry){
+				var currentCompatibilityIndex=0;
+				entry.answerArray.forEach(function(score, index){
+					currentCompatibilityIndex+=Math.abs(score-answerArray[index])
+				})
+				if(currentCompatibilityIndex<=compatibilityIndex)
+				{
+					compatibilityIndex= currentCompatibilityIndex;	
+					friendo=entry;
+				}
+
+			})
+			$("#modal-name").text(friendo.name);
+			$("#modal-picture").attr("src", friendo.pic);
+			$("#friend-modal").modal({
+				fadeDuration: 1000,
+				fadeDelay: 0.50
+			});
+			console.log(friendo);
+			var newFriend={
+				name:name,
+				pic:pic,
+				answerArray:answerArray
+			}
+			$.post("/api/new", newFriend)
+			.done(function(data){
+				console.log(data);
+			})
+		})
+		
+	});
+</script>
+</html>
